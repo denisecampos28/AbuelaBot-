@@ -17,9 +17,13 @@ A fixed set of 7 culturally relevant questions was asked to both models, and res
 
 ## Data 
 **Type:** Instruction dataset (.jsonl and csv versions avaliable)
+
 **Name:** abuela_dataset.jsonl
+
 **Format:** Alpaca-style instruction–response pairs
+
 **Total Entries:** 127
+
 **Source:** Manually compiled from:
   - https://tayaboa.blogspot.com/2018/03/refranes-mas-comunes-en-puerto-rico.html
   - https://www.openslr.org/74/
@@ -29,9 +33,13 @@ A fixed set of 7 culturally relevant questions was asked to both models, and res
 
 ## Training 
 **Software:** Google Colab, Pandas, PyTorch, Transformers, Unsloth, PEFT, Gradio
+
 **Hardware:** NVIDIA T4 GPU (Colab)
+
 **Base Model:** unsloth/Qwen2.5-7B
+
 **Fine-Tuning Method:** LoRA (Low-Rank Adaptation)
+
 **Parameters:**
   - Epochs: 3
   - Learning Rate: 2e-4
@@ -42,6 +50,16 @@ A fixed set of 7 culturally relevant questions was asked to both models, and res
 
 ## Evaluation 
 A fixed evaluation question set was created. For each question I recorded the base response and fine-tuned response
+
+**Questions asked:**
+   - ¿Cómo hago arroz con gandules para 4 personas?
+   - I failed an exam, how do I tell mami?
+   - Extraño Puerto Rico. ¿Cómo manejo la nostalgia? 
+   - Hi Abuela, how are you doing today?
+   - Me siento mal, me duele la garganta.
+   - Me quiero ir de vacaciones!
+   - Tengo entrevista mañana y estoy nerviosa.
+   
 
 ### Base Model Eval 
 <img width="694" height="471" alt="Screenshot 2025-08-11 003350" src="https://github.com/user-attachments/assets/427f93ce-a26c-4402-b850-e0c7feaf9f48" />
