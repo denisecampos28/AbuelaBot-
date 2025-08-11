@@ -13,7 +13,7 @@ Two evaluation phases were performed:
    - Base Model: Qwen2.5 7B 
    - Fine-Tuned Model: Same base model fine-tuned using LoRA on a custom dataset (abuela_dataset.jsonl)
 
-A fixed set of 7 culturally relevant questions was asked to both models, and responses were saved for comparison. I only used 7 questions for the evaluation becasue the data that the model was tuned on was small. 
+A fixed set of 7 culturally relevant questions was asked to both models, and responses were saved for comparison. I only used 7 questions for the evaluation because the data that the model was tuned on was small. 
 
 ## Data 
 **Type:** Instruction dataset (.jsonl and csv versions avaliable)
@@ -49,10 +49,14 @@ A fixed evaluation question set was created. For each question I recorded the ba
 ### Fine-tuned Model Eval 
 <img width="710" height="168" alt="Screenshot 2025-08-11 002122" src="https://github.com/user-attachments/assets/0cf96c6c-4a6c-42aa-a258-bd919425ac61" />
 
+When comparing the two sets of results, the difference between the base model (Model 1) and the fine-tuned model (Model 2) is clear. The base model’s responses were consistently warm, detailed, and aligned with the “Abuela” persona, often going beyond simply answering the question to add comfort, personal touches, and culturally relevant remedies or advice. However, the advice and language used were not specific to Puerto Rican norms, and the lingo did not fully reflect the intended cultural background. Additionally, the base model occasionally produced overly long responses or repeated certain phrases like “¡Ay, mi amor!” and “Mi querida niña,” and a few answers were cut off mid-sentence, issues that appeared to stem more from formatting and token limits than from a lack of understanding.
+
+The fine-tuned model, on the other hand, delivered shorter and more direct responses, often incorporating Puerto Rican sayings. While this added an element of cultural authenticity, it frequently lacked the emotional depth and warmth that the project aimed to capture. Many answers were surface-level, resembling quick chatbot replies rather than the storytelling, nurturing style expected from an “Abuela.” In several cases, the fine-tuned model offered vague reassurance or brief refranes without explaining their meaning or providing practical advice, and some refranes were contextually irrelevant. This resulted in a tone that, while culturally flavored, was less engaging and less personal than the base model’s.
+
+Overall, although the fine-tuned model demonstrated moments of cultural authenticity through the use of refranes, it fell short of the rich, warm conversational style that made the base model successful. In this case, fine-tuning did not lead to a clear improvement in achieving the project’s goals. If anything, the base model better captured the intended personality, suggesting that the fine-tuning dataset may have been too small or lacked enough examples that emphasized emotional warmth, detailed advice, and storytelling.
 
 ## Roadblocks
-
-
+I ran into repeated setbacks with model loading, environment compatibility, and deployment. At various points, library version conflicts, GPU restrictions, and dependency errors slowed progress. Even after resolving those issues, integrating the model into an interactive chatbot brought its own frustrations—Gradio interfaces threw argument errors, chat templates had to be manually configured, and deployment on Colab often hung or failed. Despite the frustration, each roadblock was a learning opportunity, reinforcing the importance of environment setup, dataset quality, and iterative testing in machine learning projects.
 
 ## Conclusion 
 This project demonstrated how fine-tuning a large language model on a small but culturally specific dataset can dramatically change its tone, vocabulary, and personality.
@@ -77,8 +81,9 @@ File	Description
   - abuelabot_chatbot.ipynb:	this file runs the fine-tuned model and asks the evaluation questions
   - base_responses.ipynb:	this file runs the base model (not fine-tuned) and asks the evaluation questions
   - finetuned_Qwen2_5_7B_Alpaca (2).ipynb:	Fine-tuning notebook for Qwen2.5 7B using LoRA
-  - Qwen2_5_(7B)_Alpaca (2).ipynb:	this file contains the notebook provided by unsloth for fine-tuning 
-
+  - Qwen2_5_(7B)_Alpaca (2).ipynb:	this file contains the notebook provided by unsloth for fine-tuning
+  - for_proj Sheet 1.pdf: eval for base model
+  - for_proj Sheet 2.pdf: eval for tuned model
 
 
 ## Software Setup 
@@ -92,16 +97,5 @@ File	Description
 | `unsloth`      | latest                |
 | `torch`        | >= 2.0                |
 | `pandas`       | >= 1.5                |
-
-
-
-
-
-
-
-
-
-
-
 
 
