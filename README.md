@@ -112,7 +112,6 @@ File	Description
 | Package        | Version (or Minimum) |
 |----------------|----------------------|
 | `transformers` | >= 4.37               |
-| `datasets`     | >= 2.16               |
 | `peft`         | >= 0.7                |
 | `bitsandbytes` | >= 0.41               |
 | `gradio`       | >= 4.0                |
