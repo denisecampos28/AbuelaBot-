@@ -86,10 +86,15 @@ To improve AbuelaBot, the first priority would be expanding the dataset. The cur
 
 ## How to reproduce results 
 1.) Download the dataset (abuela_dataset.jsonl)
+
 2.) Install dependencies: pip install -U transformers datasets peft bitsandbytes gradio unsloth
+
 3.) Load the base model (unsloth/Qwen2.5-7B)
+
 4.) Fine-tune with LoRA using the notebook provided (finetuned_Owen2_5_7B_Alpaca(2).ipynb)
+
 5.) Deploy locally using notebook (abuela_chatbot.ipynb)
+
 
 
 ##  Overivew of Files 
@@ -102,7 +107,6 @@ File	Description
   - Qwen2_5_(7B)_Alpaca (2).ipynb:	this file contains the notebook provided by unsloth for fine-tuning
   - for_proj Sheet 1.pdf: eval for base model
   - for_proj Sheet 2.pdf: eval for tuned model
-
 
 ## Software Setup 
 | Package        | Version (or Minimum) |
